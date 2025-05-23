@@ -9,21 +9,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 
+
 @Controller
 public class BookController {
-
-    private final BookService bookService;
-
-    BookController(BookService bookService) {
-        this.bookService = bookService;
-    }
     @Autowired
+    BookService  bookService;
+
     @RequestMapping("/")
     public String index(Model model) {
         model.addAttribute("msg","this is setting message");
         return "index";
     }
-
+    
     @RequestMapping(value="/post", method=RequestMethod.POST)
     public ModelAndView postForm(@RequestParam("id") String id, 
     @RequestParam("title") String title,@RequestParam("writter") String writter, 
