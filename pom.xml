@@ -8,10 +8,10 @@
 		<version>3.4.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>jp.te4a.spring.boot.myapp11</groupId>
-	<artifactId>jp.te4a.spring.boot.myapp11</artifactId>
+	<groupId>jp.te4a.spring.boot.myapp12</groupId>
+	<artifactId>jp.te4a.spring.boot.myapp12</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>mybootapp11</name>
+	<name>mybootapp12</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -95,6 +95,13 @@
 		<groupId>jakarta.persistence</groupId>
 		<artifactId>jakarta.persistence-api</artifactId>
 		<version>3.1.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.webjars/bootstrap -->
+		<dependency>
+		<groupId>org.webjars</groupId>
+		<artifactId>bootstrap</artifactId>
+		<version>5.3.5</version>
 		</dependency>
 
 	</dependencies>
