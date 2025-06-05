@@ -9,10 +9,15 @@ public class WritterValidator implements ConstraintValidator<Writter,String>{
     public void initialize(Writter nv){ ok = nv.ok(); }
     @Override
     public boolean isValid(String in,ConstraintValidatorContext cxt){
-        if(in == null){
+        if (in == null) return true; 
+
+        if (in.equals(ok)) {
+            return true;
+        } else {
+            cxt.disableDefaultConstraintViolation();
+            cxt.buildConstraintViolationWithTemplate("Input " + in)
+                    .addConstraintViolation();
             return false;
         }
-        System.out.println(in.equals(ok));
-        return !in.equals(ok);
     }
 } 
