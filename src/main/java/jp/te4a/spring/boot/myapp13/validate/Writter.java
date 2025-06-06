@@ -16,7 +16,7 @@ import jakarta.validation.Payload;
 
 public @interface Writter {
     String ok();
-    String message() default "input {ok}.";
+    String message() default "input 入力値";
     // Classオブジェクトを得る（戻り値とする）メソッドgroups()
     // デフォルト値は空のクラス
     Class<?>[] groups() default {};
